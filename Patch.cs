@@ -11,18 +11,18 @@ namespace Rebind
     {
         public override string Name => "Rebind";
         public override string Author => "LeCloutPanda";
-        public override string Version => "1.0.1";
-        public static ModConfiguration config;
+        public override string Version => "1.0.2";
 
+        //public static ModConfiguration config;
         //[AutoRegisterConfigKey]
         //private static ModConfigurationKey<bool> ENABLED = new ModConfigurationKey<bool>("TEST BOOL", "", () => true);
 
-        private static TrackedObject leftController, rightController;
+        //private static TrackedObject leftController, rightController;
 
         public override void OnEngineInit()
         {
-            config = GetConfiguration();
-            config.Save(true);
+            //config = GetConfiguration();
+            //config.Save(true);
 
             Harmony harmony = new Harmony($"dev.{Author}.{Name}");
             harmony.PatchAll();
